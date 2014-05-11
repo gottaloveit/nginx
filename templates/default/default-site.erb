@@ -9,7 +9,7 @@ server {
     index  index.html index.htm;
   }
   
-  <% if node['ngx_pagespeed']['conf_enable'] -%>
+  <% if node['nginx']['ngx_pagespeed']['conf_enable'] -%>
   include <%= node['nginx']['dir'] %>/conf.d/ngx_pagespeed.siteconfig;
   <% end %>
   

@@ -1,7 +1,7 @@
 
-<% if node['ngx_pagespeed']['conf_enable'] -%>
+<% if node['nginx']['ngx_pagespeed']['conf_enable'] -%>
 pagespeed on;
-pagespeed FileCachePath <%= node['ngx_pagespeed']['conf_filecachepath'] %>;
+pagespeed FileCachePath <%= node['nginx']['ngx_pagespeed']['conf_filecachepath'] %>;
 <% else -%>
 pagespeed off;
 <% end %>
