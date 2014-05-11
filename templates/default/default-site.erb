@@ -8,4 +8,9 @@ server {
     root   <%= node['nginx']['default_root'] %>;
     index  index.html index.htm;
   }
+  
+  <% if node['ngx_pagespeed']['conf_enable'] -%>
+  include <%= node['nginx']['dir'] %>/conf.d/ngx_pagespeed.siteconfig;
+  <% end %>
+  
 }
